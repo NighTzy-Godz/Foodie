@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import { foodData } from "../../data/foodData";
-import categories from "../../data/foodCategories";
+import { categories } from "../../data/foodCategories";
 
 import FoodCard from "../common/FoodCard";
 

@@ -1,15 +1,3 @@
-// 5 INFORMATION PER FOOD
-
-// ========= NEED TO GET ============
-// BURGER id = 1
-// FRIES id = 2
-// PIZZA id = 3
-// RICE id = 4
-// CHICKEN id = 5
-// BEEF id = 6
-// PORK id = 7
-// NOODLES id = 8
-
 const foodData = [
   {
     id: 15,
