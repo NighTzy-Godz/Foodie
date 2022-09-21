@@ -43,8 +43,6 @@ class MainFoodPages extends Component {
     const { foods, currentCategory, currentPage, pageSize, categories } =
       this.state;
 
-    console.log(currentCategory);
-
     const filteredFoods =
       currentCategory && currentCategory.id
         ? foods.filter((food) => food.category.id === currentCategory.id)
