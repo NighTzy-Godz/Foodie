@@ -1,0 +1,105 @@
+/* FONTS ============ */
+
+@font-face {
+  font-family: gelion_light;
+  src: url("../fonts/Gelion\ Light.ttf");
+}
+
+@font-face {
+  font-family: gelion_regular;
+  src: url("../fonts/Gelion\ Regular.ttf");
+}
+
+@font-face {
+  font-family: gelion_bold;
+  src: url("../fonts/Gelion\ Bold.ttf");
+}
+
+/* COLOR VARIABLES ================ */
+
+:root {
+  --primary-: #fff9ea;
+  --light-: #fff9ea;
+
+  --lightText-: #75726d;
+
+  --orange-: #f28b42;
+  --btnColor-: #ffcb45;
+
+  --black-: #1d1d1df4;
+}
+
+html {
+  padding: 0;
+}
+
+/* GLOBAL VARIABLES ============= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  width: 85%;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+.nav-active {
+  color: var(--orange-) !important;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.navBtn {
+  padding: 6px;
+  display: block;
+  width: 7em;
+  background-color: var(--btnColor-);
+  color: var(--black-);
+  font-family: gelion_bold;
+  font-size: 18px;
+  border-radius: 17px;
+  /* text-align: center; */
+}
+
+.text {
+  text-align: center;
+  max-width: 520px;
+  /* margin-bottom: 20px; */
+  margin-inline: auto;
+  justify-self: center;
+}
+
+.text .title {
+  font-family: gelion_light;
+  /* margin-bottom: 10px; */
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--orange-);
+}
+
+.text h3 {
+  font-family: gelion_regular;
+  font-size: 40px;
+  color: var(--black-);
+  margin-bottom: 10px;
+}
+
+.text .desc {
+  font-family: gelion_regular;
+  color: var(--lightText-);
+  /* font-size: 100px; */
+  text-transform: capitalize;
+  font-size: 18px;
+}

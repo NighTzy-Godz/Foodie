@@ -1,0 +1,97 @@
+.main_food {
+  width: 100%;
+  display: grid;
+  max-width: 100%;
+  grid-template-columns: 25% 75%;
+}
+
+.main_food .col-3 {
+  /* background: red; */
+  flex: 0 0 auto;
+}
+
+.main_food .col-9 {
+  flex: 0 0 auto;
+}
+
+.food_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+
+  margin: 20px 0px 20px 20px;
+}
+
+.menu_food_box {
+  cursor: pointer;
+  border-radius: 20px;
+  padding: 10px;
+  max-width: 380px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.menu_food_box .food_img {
+  max-width: 100%;
+}
+
+.menu_food_box .food_img img {
+  object-fit: cover;
+  border-radius: 20px;
+  height: 300px;
+  width: 100%;
+}
+
+.menu_food_box h3 {
+  font-family: gelion_regular;
+  font-size: 20px;
+  color: var(--black-);
+  margin-bottom: 10px;
+}
+
+.menu_food_box p {
+  font-family: gelion_regular;
+}
+
+.menu_food_box .rating_stock {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.menu_food_box .rating {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.menu_food_box .rating i {
+  margin-right: 5px;
+  color: #f5ef4c;
+}
+
+.menu_food_box b {
+  font-family: gelion_bold;
+}
+
+.menu_food_box .stock {
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+.menu_food_box .stock i {
+  color: var(--orange-);
+  margin-right: 5px;
+}
+
+.menu_food_box .price_mins {
+  margin-bottom: 10px;
+  justify-content: space-between;
+}
+
+.menu_food_box .price {
+  color: var(--orange-);
+}
+
+.menu_food_box .minsToCook i {
+  color: var(--orange-);
+  margin-right: 5px;
+}

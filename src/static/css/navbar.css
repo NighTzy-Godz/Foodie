@@ -1,0 +1,131 @@
+.mainNav {
+  background-color: var(--primary-);
+  padding: 10px;
+  width: 100%;
+  position: relative;
+}
+
+.navContainer {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  /* width: 100%; */
+  /* background: red; */
+}
+
+/* .mainNav .logo {
+  margin-right: 20px;
+} */
+
+.mainNav .logo a {
+  color: var(--orange-);
+  font-family: gelion_bold;
+  font-size: 45px;
+  display: block;
+}
+
+.mainNav .hide_content {
+  /* background: red; */
+  width: 100%;
+  display: flex;
+  /* justify-content: space-around; */
+}
+
+.mainNav .hide_content ul {
+  display: flex;
+  align-items: center;
+  margin: 0 auto !important;
+}
+
+.mainNav li a {
+  margin-right: 20px;
+  font-size: 21px;
+  font-family: gelion_regular;
+  color: var(--lightText-);
+}
+
+.mainNav .navUtils {
+  display: flex;
+  align-items: center;
+}
+
+.navUtils .search {
+  margin-right: 20px;
+}
+
+.navUtils .search i {
+  font-size: 20px;
+  color: var(--black-);
+}
+
+.navUtils .cart {
+  margin-right: 20px;
+}
+
+.navUtils .cart i {
+  color: var(--black-);
+  font-size: 20px;
+}
+
+.navUtils .navBtn i {
+  margin-left: 10px;
+  margin-right: 15px;
+  font-size: 16px !important;
+}
+
+.mainNav .hideBtn {
+  position: absolute;
+  right: 25px;
+  font-size: 20px;
+  top: 25px;
+  color: var(--black-);
+  display: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+  .mainNav .logo a {
+    font-size: 35px;
+    display: block;
+    /* margin-bottom: 20px; */
+  }
+
+  .mainNav .navContainer {
+    display: block;
+  }
+
+  .mainNav .hide_content {
+    display: none;
+  }
+
+  .mainNav .hide_content.show {
+    display: block;
+  }
+
+  .mainNav .hide_content ul {
+    margin-top: 20px !important;
+    display: block;
+  }
+  .mainNav .hide_content ul li {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+
+  .hide_content .navUtils .search i,
+  .hide_content .navUtils .cart i {
+    font-size: 17px;
+  }
+
+  .hide_content .navUtils .navBtn {
+    font-size: 15px;
+    padding: 5px;
+  }
+
+  .mainNav .hideBtn {
+    display: block;
+  }
+
+  .mainNav .show {
+    display: block;
+  }
+}
