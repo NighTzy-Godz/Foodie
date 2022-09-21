@@ -4,7 +4,7 @@ import "../static/css/main.css";
 import HomePage from "./pages/Homepage";
 import HomeSharedLayout from "./pages/HomeSharedLayout";
 import MainFoodPages from "./pages/MainFoodPages";
-import NavBar from "./common/Navbar";
+
 import NotFound from "./common/Not-Found";
 
 import About from "./pages/about";

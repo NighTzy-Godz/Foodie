@@ -10,13 +10,13 @@
 // PORK id = 7
 // NOODLES id = 8
 
-export default [
+const foodData = [
   {
     id: 15,
     name: "Rainbow Fried Rice",
     desc: "To keep the rice texture firm in the finished dish, rinse the cold cooked rice and drain it well before adding it to the stir-fry. For variety, substitute chicken or shrimp for the pork.",
     image:
-      "https://www.lovefoodhatewaste.com/sites/default/files/styles/custom_large/public/rainbow%20fried%20rice_0.jpg?itok=3HpxGDLj",
+      "https://cdn-prd.healthymealplans.com/recipe/073f82bd03f0c82cda848bc6cfdc4c3f-Rainbow-Fried-Rice_16x9_1200_Healthy-Meal-Plans.jpg",
     category: { id: 3, name: "Rice" },
     price: 206,
     rating: 4.7,
@@ -195,3 +195,5 @@ export default [
     minutesToCook: 26,
   },
 ];
+
+export { foodData };

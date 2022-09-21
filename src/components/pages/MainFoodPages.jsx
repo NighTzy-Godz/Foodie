@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import foodData from "../../data/foodData";
+import { foodData } from "../../data/foodData";
 import categories from "../../data/foodCategories";
 
 import FoodCard from "../common/FoodCard";
@@ -11,6 +11,7 @@ import Paginate from "../common/paginate";
 import { paginate } from "../utils/paginate";
 
 import "../../static/css/mainfoodpage.css";
+import SearchBar from "../common/SearchBar";
 
 class MainFoodPages extends Component {
   state = {
@@ -19,6 +20,7 @@ class MainFoodPages extends Component {
     currentCategory: {},
     categories: [],
     currentPage: 1,
+    searchTerm: "",
   };
 
   componentDidMount() {
@@ -32,21 +34,42 @@ class MainFoodPages extends Component {
   }
 
   handleCategory = (category) => {
-    this.setState({ currentCategory: category, currentPage: 1 });
+    this.setState({
+      currentCategory: category,
+      currentPage: 1,
+      searchTerm: "",
+    });
   };
 
   handlePageChange = (page) => {
     this.setState({ currentPage: page });
   };
 
-  render() {
-    const { foods, currentCategory, currentPage, pageSize, categories } =
-      this.state;
+  handleSearch = (searchTerm) => {
+    this.setState({ searchTerm });
+  };
 
-    const filteredFoods =
-      currentCategory && currentCategory.id
-        ? foods.filter((food) => food.category.id === currentCategory.id)
-        : foods;
+  render() {
+    const {
+      categories,
+      currentCategory,
+      currentPage,
+      foods,
+      pageSize,
+      searchTerm,
+    } = this.state;
+
+    let filteredFoods = foods;
+
+    if (searchTerm) {
+      filteredFoods = foods.filter((food) => {
+        return food.name.toLowerCase().startsWith(searchTerm.toLowerCase());
+      });
+    } else if (currentCategory && currentCategory.id) {
+      filteredFoods = foods.filter((food) => {
+        return food.category.id === currentCategory.id;
+      });
+    }
 
     const paginatedFoods = paginate(filteredFoods, pageSize, currentPage);
 
@@ -61,6 +84,7 @@ class MainFoodPages extends Component {
             />
           </div>
           <div className="col-9">
+            <SearchBar onSearch={this.handleSearch} value={searchTerm} />
             <div className="food_grid">
               <FoodCard foods={paginatedFoods} />
             </div>

@@ -24,7 +24,7 @@
   color: var(--black-);
   font-family: gelion_regular;
   border: 1px solid rgba(0, 0, 0, 0.125);
-  transition: all 0.182s ease-in-out;
+  transition: all 0.125s ease-in-out;
 }
 
 .sidebar ul li.active {

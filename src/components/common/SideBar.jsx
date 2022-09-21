@@ -7,7 +7,7 @@ const Sidebar = (props) => {
   const renderSidebar = listOfCategories.map((category) => {
     return (
       <li
-        key={category.id}
+        key={category.id + 1}
         className={`${currentCategory.name === category.name ? "active" : ""}`}
         onClick={() => onCategoryChange(category)}
       >
